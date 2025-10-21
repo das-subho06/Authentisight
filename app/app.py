@@ -3,6 +3,7 @@ import numpy as np
 from PIL import Image, ImageChops, ImageEnhance
 import io
 import pathlib
+import streamlit_themes as st_theme
 
 # --- NEW LIBRARIES TO IMPORT ---
 from transformers import AutoImageProcessor, AutoModelForImageClassification
