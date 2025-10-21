@@ -3,7 +3,9 @@ import numpy as np
 from PIL import Image, ImageChops, ImageEnhance
 import io
 import pathlib
-import streamlit_themes as st_theme
+
+# --- CONFIGURABLE CONSTANTS ---
+DEEPFAKE_THRESHOLD = 0.65  # 65% confidence threshold
 
 # --- NEW LIBRARIES TO IMPORT ---
 from transformers import AutoImageProcessor, AutoModelForImageClassification
@@ -104,7 +106,6 @@ if uploaded_file is not None:
             st.subheader("Deepfake Analysis Results")
             st.metric(label="AI-Generated Probability Score", value=f"{fake_probability:.2%}")
 
-            DEEPFAKE_THRESHOLD = 0.65  # 65% confidence threshold
             if fake_probability > DEEPFAKE_THRESHOLD:
                 st.error("⚠️ Warning: This image is likely AI-generated or a deepfake.")
             else:
