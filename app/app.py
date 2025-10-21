@@ -68,7 +68,8 @@ def perform_ela(uploaded_file_bytes, quality=90):
 
 
 # --- UI PART (Your original code) ---
-st.header("Welcome to AUTHENTISIGHT!")
+st.title("AuthentiSight: Image Authenticity Detector")
+st.header("Detect Deepfakes and Image Forgeries with Ease!")
 st.markdown("---")
 st.write("Your essential web tool for verifying the authenticity of digital images. Using advanced computer vision and deep learning algorithms, it swiftly analyzes uploaded photos to determine the likelihood of them being AI-generated (synthetic media) or digitally morphed/altered (deepfakes)")
 
