@@ -122,7 +122,7 @@ if uploaded_file is not None:
 
             ela_array = np.array(result_ela_image.convert('L'))
             std_dev = np.std(ela_array)
-            TAMPER_THRESHOLD = 20
+            TAMPER_THRESHOLD = 15
             
             st.metric(label="Tampering Score (Standard Deviation of ELA)", value=f"{std_dev:.2f}")
             
